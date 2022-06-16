@@ -27,7 +27,7 @@ public: ///Доступное всем
             for (int j = 0; j < 3; j++) {
                 cout << "   " << mat[i][j] << "   ";
             }
-            cout << endl;
+            cout << endl;///
         }
     }
 

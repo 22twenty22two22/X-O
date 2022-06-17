@@ -10,10 +10,10 @@ int n;
 class game { ///Объявление класса
 public: ///Доступное всем
 //Функция 0
-    void clear() {
+    void clear() { ///функция, которая в начале игры заполняет пустые ячейки матрицы символами
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                mat[i][j] = 5;
+                mat[i][j] = 3; ///можно менять на 1,2,3,4,5,6
             }
         }
         player = 'X';
@@ -21,13 +21,13 @@ public: ///Доступное всем
     }
 
 //Функция 1
-    void draw() {
+    void draw() { ///Функция, которая выводит матрицу
 //system("cls");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 cout << "   " << mat[i][j] << "   ";
             }
-            cout << endl;///
+            cout << endl;///перевод на следующую строку
         }
     }
 
@@ -184,31 +184,31 @@ public: ///Доступное всем
 };
 
 int main() {
-    game g1;
+    game g1; /// вызов класса игры
     do {
         cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
         cout << "      | X / O |\n";
         cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
         n = 0;
-        g1.clear();
-        g1.draw();
-        while (1) {
+        g1.clear(); /// заполняется пустая матрица
+        g1.draw(); ///вывод матрицы
+        while (1) {///цикл повторения программым, который прервётся при наличии победы одного из игроков или ничьей
             n++;
-            g1.input();
-            g1.draw();
-            if (g1.win() == 'X') {
-                cout << "Player 1 won!\n" << endl;
-                break;
-            } else if (g1.win() == 'O') {
-                cout << "Player 2 won!\n" << endl;
-                break;
-            } else if (g1.win() == '/' && n == 9) {
+            g1.input(); ///программа получсет данные и заполняет матрицу
+            g1.draw(); /// вывод матрицы с обновленными данными
+            if (g1.win() == 'X') { ///проверка наличия победы игрока Х
+                cout << "Player X won!\n" << endl;
+                break;///прерывает цыкл
+            } else if (g1.win() == 'O') { ///проверка наличия победы игрока О
+                cout << "Player O won!\n" << endl;
+                break;///прерывает цыкл
+            } else if (g1.win() == '/' && n == 9) { ///проверка наличия ничьей
                 cout << "Draw!\n" << endl;
-                break;
+                break;///прерывает цыкл
             }
-            g1.player2();
+            g1.player2();/// смена игрока после каждого хода
         }
-        cout << "Do you want to play again? Press (y/n)";
+        cout << "Do you want to play again? Press (y/n)"; /// после завершения игры можно начать заново
 //system("pause");
     } while (getche() == 'y');
 }

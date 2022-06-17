@@ -9,18 +9,18 @@ int n;
 
 class game { ///Объявление класса
 public: ///Доступное всем
-//Функция 0
+//Функция 1
     void clear() { ///функция, которая в начале игры заполняет пустые ячейки матрицы символами
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 mat[i][j] = 3; ///можно менять на 1,2,3,4,5,6
             }
         }
-        player = 'X';
+//      player = 'X';
         n = 0;
     }
 
-//Функция 1
+//Функция 2
     void draw() { ///Функция, которая выводит матрицу
 //system("cls");
         for (int i = 0; i < 3; i++) {
@@ -31,7 +31,7 @@ public: ///Доступное всем
         }
     }
 
-//Функция 2
+//Функция 3
     void input() { ///Функция ввода данных
         int a;
         cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
@@ -43,7 +43,9 @@ public: ///Доступное всем
             if (mat[0][0] != 'X' && mat[0][0] != 'O') {
                 mat[0][0] = player; /// если ячейка не занята то ставится в эту ячейку
             } else {
-                cout << "Try again! This cell is occupied.\n"; /// если занята, то сообщается об этом
+                cout << "   Try again! This cell is occupied.\n\n"; /// если занята, то сообщается об этом
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                draw();
                 input();
             }
         }
@@ -52,7 +54,9 @@ public: ///Доступное всем
             if (mat[0][1] != 'X' && mat[0][1] != 'O') {
                 mat[0][1] = player; /// если ячейка не занята то ставится в эту ячейку
             } else {
-                cout << "Try again! This cell is occupied.\n"; /// если занята, то сообщается об этом
+                cout << "   Try again! This cell is occupied.\n\n"; /// если занята, то сообщается об этом
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                draw();
                 input();
             }
         }
@@ -61,7 +65,9 @@ public: ///Доступное всем
             if (mat[0][2] != 'X' && mat[0][2] != 'O') {
                 mat[0][2] = player; /// если ячейка не занята то ставится в эту ячейку
             } else {
-                cout << "Try again! This cell is occupied.\n"; /// если занята, то сообщается об этом
+                cout << "   Try again! This cell is occupied.\n\n"; /// если занята, то сообщается об этом
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                draw();
                 input();
             }
         }
@@ -70,7 +76,9 @@ public: ///Доступное всем
             if (mat[1][0] != 'X' && mat[1][0] != 'O') {
                 mat[1][0] = player; /// если ячейка не занята то ставится в эту ячейку
             } else {
-                cout << "Try again! This cell is occupied.\n"; /// если занята, то сообщается об этом
+                cout << "   Try again! This cell is occupied.\n\n"; /// если занята, то сообщается об этом
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                draw();
                 input();
             }
         }
@@ -79,7 +87,9 @@ public: ///Доступное всем
             if (mat[1][1] != 'X' && mat[1][1] != 'O') {
                 mat[1][1] = player; /// если ячейка не занята то ставится в эту ячейку
             } else {
-                cout << "Try again! This cell is occupied.\n"; /// если занята, то сообщается об этом
+                cout << "   Try again! This cell is occupied.\n\n"; /// если занята, то сообщается об этом
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                draw();
                 input();
             }
         }
@@ -88,7 +98,9 @@ public: ///Доступное всем
             if (mat[1][2] != 'X' && mat[1][2] != 'O') {
                 mat[1][2] = player; /// если ячейка не занята то ставится в эту ячейку
             } else {
-                cout << "Try again! This cell is occupied.\n"; /// если занята, то сообщается об этом
+                cout << "   Try again! This cell is occupied.\n\n"; /// если занята, то сообщается об этом
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                draw();
                 input();
             }
         }
@@ -97,7 +109,9 @@ public: ///Доступное всем
             if (mat[2][0] != 'X' && mat[2][0] != 'O') {
                 mat[2][0] = player; /// если ячейка не занята то ставится в эту ячейку
             } else {
-                cout << "Try again! This cell is occupied.\n"; /// если занята, то сообщается об этом
+                cout << "   Try again! This cell is occupied.\n\n"; /// если занята, то сообщается об этом
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                draw();
                 input();
             }
         }
@@ -106,7 +120,9 @@ public: ///Доступное всем
             if (mat[2][1] != 'X' && mat[2][1] != 'O') {
                 mat[2][1] = player; /// если ячейка не занята то ставится в эту ячейку
             } else {
-                cout << "Try again! This cell is occupied.\n"; /// если занята, то сообщается об этом
+                cout << "   Try again! This cell is occupied.\n\n"; /// если занята, то сообщается об этом
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                draw();
                 input();
             }
         }
@@ -115,13 +131,15 @@ public: ///Доступное всем
             if (mat[2][2] != 'X' && mat[2][2] != 'O') {
                 mat[2][2] = player; /// если ячейка не занята то ставится в эту ячейку
             } else {
-                cout << "Try again! This cell is occupied.\n"; /// если занята, то сообщается об этом
+                cout << "   Try again! This cell is occupied.\n\n"; /// если занята, то сообщается об этом
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                draw();
                 input();
             }
         }
     }
 
-//Функция 3
+//Функция 4
     void player2() { /// функция проверки игрока (меняет игрока после его хода)
         if (player == 'X')
             player = 'O';
@@ -129,7 +147,7 @@ public: ///Доступное всем
             player = 'X';
     }
 
-//Функция 4
+//Функция 5
     char win() { /// проверка выигрыша по строкам, столбцам и диагоналям
         if (mat[0][0] == 'X' && mat[0][1] == 'X' && mat[0][2] == 'X') ///проверяет первую строку на победу Х
             return 'X';
@@ -181,34 +199,50 @@ public: ///Доступное всем
 
         return ('/');
     }
+
+//Функция 6
+    void choose() { /// Функция для выбора, кто будет ходить первым
+        int c;
+        cout << "   Chose who is going to be first (1-X | 2-O): ";
+        cin >> c;
+        if (c == 2)
+            player = 'O';
+    }
 };
 
 int main() {
     game g1; /// вызов класса игры
     do {
+        cout <<"\n";
         cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-        cout << "      | X / O |\n";
+        cout << "    Game| X / O |\n";
         cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+        g1.choose();
+        cout << "  \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
         n = 0;
         g1.clear(); /// заполняется пустая матрица
         g1.draw(); ///вывод матрицы
         while (1) {///цикл повторения программым, который прервётся при наличии победы одного из игроков или ничьей
             n++;
             g1.input(); ///программа получсет данные и заполняет матрицу
+            cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
             g1.draw(); /// вывод матрицы с обновленными данными
             if (g1.win() == 'X') { ///проверка наличия победы игрока Х
-                cout << "Player X won!\n" << endl;
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                cout << "\n   Player X won!" << endl;
                 break;///прерывает цыкл
             } else if (g1.win() == 'O') { ///проверка наличия победы игрока О
-                cout << "Player O won!\n" << endl;
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                cout << "\n   Player O won!" << endl;
                 break;///прерывает цыкл
             } else if (g1.win() == '/' && n == 9) { ///проверка наличия ничьей
-                cout << "Draw!\n" << endl;
+                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+                cout << "\n   Draw!" << endl;
                 break;///прерывает цыкл
             }
             g1.player2();/// смена игрока после каждого хода
         }
-        cout << "Do you want to play again? Press (y/n)"; /// после завершения игры можно начать заново
+        cout << "   Do you want to play again? Press (y/n)"; /// после завершения игры можно начать заново
 //system("pause");
-    } while (getche() == 'y');
+    } while (getche() == 'y');///при нажатии на y игра начинается заново
 }

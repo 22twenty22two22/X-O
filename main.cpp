@@ -3,8 +3,14 @@
 #include<stdio.h>
 
 using namespace std;
+/**
+ * Матрица
+ */
 char mat[3][3] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
 char player = 'X';
+/**
+ * Переменная, считающая количество ходов. Нужна для ничьей после 9 хода (n = 9)
+ */
 int n;
 
 /**
@@ -43,11 +49,30 @@ class game {
  * Функция ввода данных и проверки занятых позиций (ячеек матрицы).
  */
     void input() {
+        /**
+         * Переменная, означающая позицию
+         */
         int a;
         cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
         cout << "   It's " << player << " turn !\n   Press any number where you want to mark: ";
         cin >> a;
         cout << "\n";
+
+        auto getCell(int a) -> char& cell{
+            if (a == 1)
+                return = mat[0][0];
+        }
+
+
+        if (cell != 'X' && cell != 'O')
+            cell = player;
+        else {
+            cout << "   Try again! This cell is occupied.\n\n";
+            cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
+            draw();
+            input();
+        }
+
 //Для 1
         if (a == 1) {
             if (mat[0][0] != 'X' && mat[0][0] != 'O') {

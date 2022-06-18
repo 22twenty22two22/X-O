@@ -3,21 +3,17 @@
 #include<stdio.h>
 
 using namespace std;
-/**
- * Матрица
- */
+/// Матрица
 char mat[3][3] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
+/// Переменная игрока. Значения Х или О
 char player = 'X';
-/**
- * Переменная, считающая количество ходов. Нужна для ничьей после 9 хода (n = 9)
- */
+/// Переменная, считающая количество ходов. Нужна для ничьей после 9 хода (n = 9)
 int n;
 
 /**
  * Объявление класса игры.
  */
-class game {
-    public:
+struct game {
 
 /**
  * Функция, которая в начале игры заполняет пустые ячейки матрицы символами.
@@ -44,42 +40,35 @@ class game {
             cout << endl;
         }
     }
-
+/**
+ * При выборе позиции возвращает матричное значение
+ * @param a  - Позиция
+ * @return Матричное значение
+ */
+    auto getCell(int a) -> char & {
+        switch (a) {
+            case 1: return mat[0][0];
+            case 2: return mat[0][1];
+            case 3: return mat[0][2];
+            case 4: return mat[1][0];
+            case 5: return mat[1][1];
+            case 6: return mat[1][2];
+            case 7: return mat[2][0];
+            case 8: return mat[2][1];
+            case 9: return mat[2][2];
+       }
+    }
 /**
  * Функция ввода данных и проверки занятых позиций (ячеек матрицы).
  */
     void input() {
-        /**
-         * Переменная, означающая позицию
-         */
+        ///Переменная, означающая позицию
         int a;
         cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
         cout << "   It's " << player << " turn !\n   Press any number where you want to mark: ";
         cin >> a;
         cout << "\n";
-
-        auto getCell(int a) -> char& {
-            if (a == 1)
-                return = mat[0][0];
-            if (a == 2)
-                return = mat[0][1];
-            if (a == 3)
-                return = mat[0][2];
-            if (a == 4)
-                return = mat[1][0];
-            if (a == 5)
-                return = mat[1][1];
-            if (a == 6)
-                return = mat[1][2];
-            if (a == 7)
-                return = mat[2][0];
-            if (a == 8)
-                return = mat[2][1];
-            if (a == 9)
-                return = mat[2][2];
-        }
-
-
+        auto &cell = getCell(a);
         if (cell != 'X' && cell != 'O')
             cell = player;
         else {
@@ -87,106 +76,6 @@ class game {
             cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
             draw();
             input();
-        }
-
-//Для 1
-        if (a == 1) {
-            if (mat[0][0] != 'X' && mat[0][0] != 'O') {
-                mat[0][0] = player;
-            } else {
-                cout << "   Try again! This cell is occupied.\n\n";
-                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-                draw();
-                input();
-            }
-        }
-//Для 2
-        if (a == 2) {
-            if (mat[0][1] != 'X' && mat[0][1] != 'O') {
-                mat[0][1] = player;
-            } else {
-                cout << "   Try again! This cell is occupied.\n\n";
-                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-                draw();
-                input();
-            }
-        }
-//Для 3
-        if (a == 3) {
-            if (mat[0][2] != 'X' && mat[0][2] != 'O') {
-                mat[0][2] = player;
-            } else {
-                cout << "   Try again! This cell is occupied.\n\n";
-                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-                draw();
-                input();
-            }
-        }
-//Для 4
-        if (a == 4) {
-            if (mat[1][0] != 'X' && mat[1][0] != 'O') {
-                mat[1][0] = player;
-            } else {
-                cout << "   Try again! This cell is occupied.\n\n";
-                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-                draw();
-                input();
-            }
-        }
-//Для 5
-        if (a == 5) {
-            if (mat[1][1] != 'X' && mat[1][1] != 'O') {
-                mat[1][1] = player;
-            } else {
-                cout << "   Try again! This cell is occupied.\n\n";
-                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-                draw();
-                input();
-            }
-        }
-//Для 6
-        if (a == 6) {
-            if (mat[1][2] != 'X' && mat[1][2] != 'O') {
-                mat[1][2] = player;
-            } else {
-                cout << "   Try again! This cell is occupied.\n\n";
-                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-                draw();
-                input();
-            }
-        }
-//Для 7
-        if (a == 7) {
-            if (mat[2][0] != 'X' && mat[2][0] != 'O') {
-                mat[2][0] = player;
-            } else {
-                cout << "   Try again! This cell is occupied.\n\n";
-                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-                draw();
-                input();
-            }
-        }
-//Для 8
-        if (a == 8) {
-            if (mat[2][1] != 'X' && mat[2][1] != 'O') {
-                mat[2][1] = player;
-            } else {
-                cout << "   Try again! This cell is occupied.\n\n";
-                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-                draw();
-                input();
-            }
-        }
-//Для 9
-        if (a == 9) {
-            if (mat[2][2] != 'X' && mat[2][2] != 'O') {
-                mat[2][2] = player;
-            } else {
-                cout << "   Try again! This cell is occupied.\n\n";
-                cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
-                draw();
-                input();
-            }
         }
     }
 

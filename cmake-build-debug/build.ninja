@@ -55,12 +55,6 @@ build CMakeFiles/X_O.dir/main.cpp.obj: CXX_COMPILER__X_O_Debug C$:/Users/ucgam/C
   OBJECT_DIR = CMakeFiles\X_O.dir
   OBJECT_FILE_DIR = CMakeFiles\X_O.dir
 
-build CMakeFiles/X_O.dir/test.cpp.obj: CXX_COMPILER__X_O_Debug C$:/Users/ucgam/CLionProjects/X-O/test.cpp || cmake_object_order_depends_target_X_O
-  DEP_FILE = CMakeFiles\X_O.dir\test.cpp.obj.d
-  FLAGS = -g -std=gnu++23
-  OBJECT_DIR = CMakeFiles\X_O.dir
-  OBJECT_FILE_DIR = CMakeFiles\X_O.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target X_O
@@ -69,7 +63,7 @@ build CMakeFiles/X_O.dir/test.cpp.obj: CXX_COMPILER__X_O_Debug C$:/Users/ucgam/C
 #############################################
 # Link the executable X_O.exe
 
-build X_O.exe: CXX_EXECUTABLE_LINKER__X_O_Debug CMakeFiles/X_O.dir/main.cpp.obj CMakeFiles/X_O.dir/test.cpp.obj
+build X_O.exe: CXX_EXECUTABLE_LINKER__X_O_Debug CMakeFiles/X_O.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\X_O.dir

@@ -58,9 +58,25 @@ class game {
         cin >> a;
         cout << "\n";
 
-        auto getCell(int a) -> char& cell{
+        auto getCell(int a) -> char& {
             if (a == 1)
                 return = mat[0][0];
+            if (a == 2)
+                return = mat[0][1];
+            if (a == 3)
+                return = mat[0][2];
+            if (a == 4)
+                return = mat[1][0];
+            if (a == 5)
+                return = mat[1][1];
+            if (a == 6)
+                return = mat[1][2];
+            if (a == 7)
+                return = mat[2][0];
+            if (a == 8)
+                return = mat[2][1];
+            if (a == 9)
+                return = mat[2][2];
         }
 
 

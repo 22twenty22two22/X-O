@@ -1,5 +1,6 @@
 #include<iostream>
 #include<conio.h>
+#include<cassert>
 #include<stdio.h>
 
 using namespace std;
@@ -57,6 +58,21 @@ struct game {
             case 8: return mat[2][1];
             case 9: return mat[2][2];
        }
+    }
+/**
+ * Функция тестировки getCell
+ */
+    void testgetCell() {
+        assert(getCell(1) == mat[0][0]);
+        assert(getCell(2) == mat[0][1]);
+        assert(getCell(3) == mat[0][2]);
+        assert(getCell(4) == mat[1][0]);
+        assert(getCell(5) == mat[1][1]);
+        assert(getCell(6) == mat[1][2]);
+        assert(getCell(7) == mat[2][0]);
+        assert(getCell(8) == mat[2][1]);
+        assert(getCell(9) == mat[2][2]);
+        cout << "Test passed!\n\n";
     }
 /**
  * Функция ввода данных и проверки занятых позиций (ячеек матрицы).
@@ -179,6 +195,7 @@ int main() {
         while (1) {
             n++;
             g1.input();
+            g1.testgetCell();
             cout << "   \xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n";
             g1.draw();
             if (g1.win() == 'X') {

@@ -31,6 +31,14 @@ TEST_CASE("Testing victory.")
     g.mat[1][1] = 'X';
     g.mat[2][2] = 'O';
     REQUIRE(g.win() == '/');
+    g.mat[0][0] = 'O';
+    g.mat[1][0] = 'O';
+    g.mat[2][0] = 'O';
+    REQUIRE(g.win() == 'O');
+    g.mat[0][1] = 'O';
+    g.mat[1][1] = 'O';
+    g.mat[2][1] = 'O';
+    REQUIRE(g.win() == 'O');
 }
 
 TEST_CASE("Testing get_cell function.")
@@ -39,9 +47,11 @@ TEST_CASE("Testing get_cell function.")
     g.mat[0][0] = 'X';
     g.mat[0][1] = 'X';
     g.mat[0][2] = 'X';
+    g.mat[0][2] = 'X';
     g.mat[2][1] = 'O';
     REQUIRE(g.getCell(1) == 'X');
     REQUIRE(g.getCell(2) == 'X');
+    REQUIRE(g.getCell(3) == 'X');
     REQUIRE(g.getCell(3) == 'X');
     REQUIRE(g.getCell(8) == 'O');
 }

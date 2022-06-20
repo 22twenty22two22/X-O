@@ -153,6 +153,21 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=X_O
 
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=2.3.8
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=2
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=3
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=8
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
+
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Program Files/JetBrains/CLion 2022.1.2/bin/mingw/bin/ranlib.exe
 
@@ -241,6 +256,15 @@ X_O_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 X_O_SOURCE_DIR:STATIC=C:/Users/ucgam/CLionProjects/X-O
+
+//Value Computed by CMake
+doctest_BINARY_DIR:STATIC=C:/Users/ucgam/CLionProjects/X-O/cmake-build-debug/doctest
+
+//Value Computed by CMake
+doctest_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+doctest_SOURCE_DIR:STATIC=C:/Users/ucgam/CLionProjects/X-O/doctest
 
 
 ########################
@@ -345,7 +369,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

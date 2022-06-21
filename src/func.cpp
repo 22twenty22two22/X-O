@@ -1,10 +1,7 @@
-#include<iostream>
-#include<conio.h>
-#include<cassert>
-#include<stdio.h>
+
 #include "func.h"
 
-using namespace std;
+
 
 /**
  * Функция, которая заполняет матрицу.

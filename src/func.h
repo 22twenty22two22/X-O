@@ -1,3 +1,6 @@
+#include<iostream>
+
+using namespace std;
 struct Game {
     /// Матрица (игровое поле)
     char mat[3][3] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};

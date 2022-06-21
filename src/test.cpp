@@ -1,5 +1,6 @@
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest.h>
-#include "func.cpp"
+#include "func.h"///h
 
 TEST_CASE("Testing clear field.")
 {

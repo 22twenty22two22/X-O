@@ -1,4 +1,5 @@
-#include "src/func.cpp"
+#include<conio.h>
+#include "src/func.h"///h
 /**
  * Функция main
  */
